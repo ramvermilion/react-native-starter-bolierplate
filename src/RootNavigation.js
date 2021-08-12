@@ -2,8 +2,8 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
 
-import LoginScreen from './LoginScreen';
-import HomeScreen from './HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import HomeScreen from './screens/HomeScreen';
 
 import Navigation from '../src/components/Navigation';
 
@@ -23,7 +23,7 @@ export default function RootNavigator() {
           <Stack.Screen
             name={pageConstants.Login}
             component={LoginScreen}
-            options={{headerShown: false}}
+            options={{headerShown: true}} //change to false for loginScreen
           />
           <Stack.Screen name={pageConstants.Home} component={HomeScreen} />
         </Stack.Navigator>
